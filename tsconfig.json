@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "./build/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "typeRoots": ["./node_modules/@types", "./src/app/types/react.d.ts"],
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "exclude": ["node_modules", "public"],
+    "include": ["config/", "webpack.config.ts", "src/", "tailwind.config.ts", "postcss.config.ts"]
+}

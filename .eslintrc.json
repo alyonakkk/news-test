@@ -1,0 +1,68 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "overrides": [],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": ["./tsconfig.json"]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": ["react", "simple-import-sort", "unused-imports"],
+    "rules": {
+        "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+        
+        // https://github.com/lydell/eslint-plugin-simple-import-sort
+        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": "error",
+        
+        // https://eslint.org/docs/latest/rules/max-len
+        "max-len": [
+            "warn",
+            {
+                "code": 120,
+                "ignoreComments": true
+            }
+        ],
+
+        // https://github.com/sweepline/eslint-plugin-unused-imports
+        "unused-imports/no-unused-imports": "error",
+
+        // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
+        "react/react-in-jsx-scope": ["off"],
+        
+        // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+        "react/jsx-props-no-spreading": ["warn"],
+        
+        // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
+        "react/no-unescaped-entities": ["off"],
+        
+        // https://typescript-eslint.io/rules/consistent-type-imports/
+        "@typescript-eslint/consistent-type-imports": ["off"],
+        
+        // https://typescript-eslint.io/rules/prefer-nullish-coalescing/
+        "@typescript-eslint/prefer-nullish-coalescing": ["off"],
+        
+        // https://typescript-eslint.io/rules/strict-boolean-expressions/
+        "@typescript-eslint/strict-boolean-expressions": ["off"],
+        
+        // https://typescript-eslint.io/rules/no-empty-function/
+        "@typescript-eslint/no-empty-function": ["off"]
+    },
+    "ignorePatterns": ["public"]
+}

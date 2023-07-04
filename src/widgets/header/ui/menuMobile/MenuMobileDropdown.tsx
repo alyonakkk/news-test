@@ -25,10 +25,10 @@ const MenuMobileDropdown: FC<IMenuMobileDropdown> = ({ menuIndex, link }) => {
     });
 
     return (
-        <ul>
+        <details>
             <p>{title}</p>
-            {menuSubList}
-        </ul>
+            <ul>{menuSubList}</ul>
+        </details>
     );
 };
 

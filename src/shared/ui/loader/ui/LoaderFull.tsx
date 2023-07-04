@@ -4,7 +4,11 @@ import { Loader } from "@/shared/ui/loader";
 
 const LoaderFull: FC = () => {
     return (
-        <div className={"absolute top-0 bottom-0 right-0 z-100 left-0 flex justify-center items-center w-full h-full"}>
+        <div
+            className={
+                "absolute top-0 bottom-0 right-0 z-[10000] left-0 flex justify-center items-center w-full h-full"
+            }
+        >
             <div className={"z-60"}>
                 <Loader />
             </div>

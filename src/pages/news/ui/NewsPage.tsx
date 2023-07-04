@@ -8,6 +8,7 @@ import { useAppDispatch } from "@/shared/config/store";
 import { PAGE_TITLE } from "@/shared/lib/constants";
 import PageTitle from "@/shared/ui/pageTitle";
 import PostsList from "@/widgets/postsList";
+import SectionContainer from "@/shared/ui/sectionContainer";
 
 const NewsPage: FC = () => {
     const dispatch = useAppDispatch();
@@ -28,11 +29,13 @@ const NewsPage: FC = () => {
                     "</p>"
                 }
             />
-            <div className={"flex flex-col gap-10"}>
-                <PostsFilter />
-                <CreatePost />
-            </div>
-            <PostsList />
+            <SectionContainer name={"news"}>
+                <div className={"flex flex-col gap-10"}>
+                    <PostsFilter />
+                    <CreatePost />
+                </div>
+                <PostsList />
+            </SectionContainer>
         </>
     );
 };

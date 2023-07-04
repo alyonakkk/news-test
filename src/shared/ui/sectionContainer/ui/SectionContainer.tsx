@@ -1,7 +1,7 @@
 import { FC, ReactNode } from "react";
 
 interface ISectionTitle {
-    title: string;
+    title?: string;
     name: string;
     children: ReactNode;
 }

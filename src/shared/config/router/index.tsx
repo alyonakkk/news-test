@@ -10,7 +10,6 @@ const AboutPage = lazy(() => import("@/pages/about"));
 const InfoPage = lazy(() => import("@/pages/info"));
 const NewsPage = lazy(() => import("@/pages/news"));
 const ProfilePage = lazy(() => import("@/pages/profile"));
-const NotFoundPage = lazy(() => import("@/pages/notFound"));
 
 const router = createHashRouter(
     [

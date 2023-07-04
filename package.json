@@ -1,6 +1,7 @@
 {
   "name": "news",
   "homepage": "http://alyonakkk.github.io/news",
+  "private": false,
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

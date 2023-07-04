@@ -56,7 +56,7 @@ const router = createBrowserRouter(
             ]
         }
     ],
-    { basename: "/news" }
+    { basename: "/" }
 );
 
 export default router;

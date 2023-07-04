@@ -1,6 +1,6 @@
 {
-  "name": "news",
-  "homepage": "http://alyonakkk.github.io/news",
+  "name": "news-test",
+  "homepage": "http://alyonakkk.github.io/news-test",
   "private": false,
   "version": "1.0.0",
   "main": "index.js",

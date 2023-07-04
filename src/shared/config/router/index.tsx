@@ -52,7 +52,7 @@ const router = createHashRouter(
                 },
                 {
                     path: "*",
-                    element: <NotFoundPage />
+                    element: <NewsPage />
                 }
             ]
         }

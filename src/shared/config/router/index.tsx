@@ -3,13 +3,13 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import Layout from "@/app/providers/layout";
 import { PrivateRoute, PublicOnlyRoute } from "@/app/providers/router";
+import LoginPage from "@/pages/login";
 import { ROUTES } from "@/shared/config/router/types";
 
 const AboutPage = lazy(() => import("@/pages/about"));
 const InfoPage = lazy(() => import("@/pages/info"));
 const NewsPage = lazy(() => import("@/pages/news"));
 const ProfilePage = lazy(() => import("@/pages/profile"));
-const LoginPage = lazy(() => import("@/pages/login"));
 const NotFoundPage = lazy(() => import("@/pages/notFound"));
 
 const router = createBrowserRouter(

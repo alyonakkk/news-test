@@ -9,7 +9,7 @@ interface IModal {
 
 const Modal: FC<IModal> = ({ title, isOpen, onClose, children }) => {
     return (
-        <div className={`modal ${isOpen ? "modal-open" : ""}`}>
+        <div className={`modal ${isOpen ? "modal-open" : ""} z-[10000]`}>
             <div className={"modal-box"}>
                 <h3 className={"mb-10 text-lg font-bold"}>{title}</h3>
                 <button className={"btn btn-sm btn-circle btn-ghost absolute right-2 top-2"} onClick={onClose}>

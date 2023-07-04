@@ -19,7 +19,7 @@ const NotificationsList: FC = () => {
         );
     });
 
-    return <ul className={"fixed bottom-5 right-5 flex flex-col gap-5"}>{notificationsList}</ul>;
+    return <ul className={"fixed bottom-5 right-5 flex flex-col gap-5 z-[10000]"}>{notificationsList}</ul>;
 };
 
 export default NotificationsList;

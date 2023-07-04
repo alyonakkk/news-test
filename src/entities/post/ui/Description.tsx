@@ -6,7 +6,7 @@ interface IDescription {
 
 const Description: FC<IDescription> = ({ description }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const maxLength = 310;
+    const maxLength = 400;
     const hasTextMore = description.slice(maxLength);
 
     useEffect(() => {

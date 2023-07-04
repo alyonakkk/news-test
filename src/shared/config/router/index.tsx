@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { createHashRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import Layout from "@/app/providers/layout";
 import { PrivateRoute, PublicOnlyRoute } from "@/app/providers/router";
@@ -11,7 +11,7 @@ const InfoPage = lazy(() => import("@/pages/info"));
 const NewsPage = lazy(() => import("@/pages/news"));
 const ProfilePage = lazy(() => import("@/pages/profile"));
 
-const router = createHashRouter(
+const router = createBrowserRouter(
     [
         {
             path: "/",

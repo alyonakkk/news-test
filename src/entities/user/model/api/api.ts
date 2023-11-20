@@ -46,7 +46,7 @@ export async function getUser(): Promise<ApiRes<IUser>> {
                 data: USER_DATA
             });
         }, 2000);
-        
+    });
 }
 
 export async function updateUser(user: IUser): Promise<ApiRes<IUser>> {

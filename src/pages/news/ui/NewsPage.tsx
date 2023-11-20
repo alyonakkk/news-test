@@ -24,6 +24,13 @@ const NewsPage: FC = () => {
         <>
             <Helmet key={"news"} htmlAttributes={{ lang: "ru" }}>
                 <title>{PAGE_TITLE[ROUTES.news]}</title>
+                <meta charSet="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+                />
+                <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+                <link rel="icon" href="favicon.ico" />
                 <meta name={"description"} content={"Узнайте все о криптовалюте, NFT и блокчейнах."} />
                 <meta
                     name={"keywords"}

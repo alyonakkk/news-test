@@ -7,7 +7,8 @@ import { LoaderFull } from "@/shared/ui/loader";
 import { Router } from "./providers/router";
 import ThemeProvider from "./providers/theme";
 
-const App: FC = () => {
+const App: FC<any> = ({ dataset }) => {
+    console.log(dataset.name);
     return (
         <Provider store={store}>
             <ThemeProvider>

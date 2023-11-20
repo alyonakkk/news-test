@@ -5,10 +5,28 @@ import { PAGE_TITLE } from "@/shared/lib/constants";
 import Image from "@/shared/ui/image";
 import PageTitle from "@/shared/ui/pageTitle";
 import SectionContainer from "@/shared/ui/sectionContainer";
+import { Helmet } from "react-helmet";
 
 const InfoPage: FC = () => {
     return (
         <>
+            <Helmet>
+                <title>{PAGE_TITLE[ROUTES.info]}</title>
+                <meta name={"description"} content={"Познакомьтесь поближе с нашей компанией"} />
+                <meta
+                    name={"keywords"}
+                    content={
+                        "программа долгосрочных сбережений граждан, пдс, долгосрочные сбережения, софинансирование, вступить в программу" +
+                        " долгосрочных сбережений, перевести накопления опс в пдс, перевод опс, преимущества, калькулятор," +
+                        " вопросы и ответы, faq, нпф сбербанка, сбернпф"
+                    }
+                />
+                <meta property={"og:title"} content={PAGE_TITLE[ROUTES.info]} />
+                <meta property={"og:url"} content={window.location.origin + window.location.pathname} />
+                <meta property={"og:description"} content={"Познакомьтесь поближе с нашей компанией"} />
+                <meta property={"og:site_name"} content={PAGE_TITLE[ROUTES.about]} />
+                <meta property={"og:locale"} content={"ru_RU"} />
+            </Helmet>
             <PageTitle title={PAGE_TITLE[ROUTES.info]} description={"Познакомьтесь поближе с нашей компанией"} />
             <SectionContainer title={"Lorem ipsum dolor sit amet"} name={"section1"}>
                 <div className={"grid grid-cols-1 md:grid-cols-2 gap-10"}>

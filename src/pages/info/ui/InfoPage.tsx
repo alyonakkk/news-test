@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 import { ROUTES } from "@/shared/config/router/types";
 import { PAGE_TITLE } from "@/shared/lib/constants";
@@ -10,7 +10,7 @@ import SectionContainer from "@/shared/ui/sectionContainer";
 const InfoPage: FC = () => {
     return (
         <>
-            <Helmet key={"info"}>
+            <Helmet key={"info"} htmlAttributes={{ lang: "ru" }}>
                 <title>{PAGE_TITLE[ROUTES.info]}</title>
                 <meta name={"description"} content={"Познакомьтесь поближе с нашей компанией"} />
                 <meta

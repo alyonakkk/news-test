@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 import { fetchCategories, fetchFilters, fetchPosts } from "@/entities/post";
 import PostsFilter from "@/features/postsFilter";
@@ -22,7 +22,7 @@ const NewsPage: FC = () => {
 
     return (
         <>
-            <Helmet key={"news"}>
+            <Helmet key={"news"} htmlAttributes={{ lang: "ru" }}>
                 <title>{PAGE_TITLE[ROUTES.news]}</title>
                 <meta name={"description"} content={"Узнайте все о криптовалюте, NFT и блокчейнах."} />
                 <meta

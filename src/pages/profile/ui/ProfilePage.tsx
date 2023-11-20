@@ -4,12 +4,12 @@ import ProfileForm from "@/features/profileForm";
 import { ROUTES } from "@/shared/config/router/types";
 import { PAGE_TITLE } from "@/shared/lib/constants";
 import PageTitle from "@/shared/ui/pageTitle";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const ProfilePage: FC = () => {
     return (
         <>
-            <Helmet key={"profile"}>
+            <Helmet key={"profile"} htmlAttributes={{ lang: "ru" }}>
                 <title>{PAGE_TITLE[ROUTES.profile]}</title>
                 <meta name={"description"} content={"Настройки личного кабинета"} />
                 <meta

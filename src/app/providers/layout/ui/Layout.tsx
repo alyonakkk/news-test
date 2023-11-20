@@ -4,9 +4,8 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import { NotificationsList } from "@/entities/notification";
 import { fetchUser, setAuth } from "@/entities/user";
-import { ROUTES } from "@/shared/config/router/types";
 import { useAppDispatch } from "@/shared/config/store";
-import { PAGE_TITLE, TOKEN_NAME } from "@/shared/lib/constants";
+import { TOKEN_NAME } from "@/shared/lib/constants";
 import Footer from "@/widgets/footer";
 import Header from "@/widgets/header";
 
@@ -15,8 +14,6 @@ const Layout: FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        document.title = PAGE_TITLE[location.pathname as ROUTES] ?? "";
-
         const token = Cookies.get(TOKEN_NAME);
 
         if (token) {

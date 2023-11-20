@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import LoginForm from "@/features/loginForm";
 import { ROUTES } from "@/shared/config/router/types";
@@ -9,7 +9,7 @@ import PageTitle from "@/shared/ui/pageTitle";
 const LoginPage: FC = () => {
     return (
         <>
-            <Helmet>
+            <Helmet key={"auth"}>
                 <title>Авторизация</title>
                 <meta name={"description"} content={"Крутая Авторизация"} />
                 <meta

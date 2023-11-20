@@ -1,4 +1,5 @@
 import { FC, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 import { fetchCategories, fetchFilters, fetchPosts } from "@/entities/post";
 import PostsFilter from "@/features/postsFilter";
@@ -7,9 +8,8 @@ import { ROUTES } from "@/shared/config/router/types";
 import { useAppDispatch } from "@/shared/config/store";
 import { PAGE_TITLE } from "@/shared/lib/constants";
 import PageTitle from "@/shared/ui/pageTitle";
-import PostsList from "@/widgets/postsList";
 import SectionContainer from "@/shared/ui/sectionContainer";
-import { Helmet } from "react-helmet";
+import PostsList from "@/widgets/postsList";
 
 const NewsPage: FC = () => {
     const dispatch = useAppDispatch();
@@ -22,7 +22,7 @@ const NewsPage: FC = () => {
 
     return (
         <>
-            <Helmet>
+            <Helmet key={"news"}>
                 <title>{PAGE_TITLE[ROUTES.news]}</title>
                 <meta name={"description"} content={"Узнайте все о криптовалюте, NFT и блокчейнах."} />
                 <meta

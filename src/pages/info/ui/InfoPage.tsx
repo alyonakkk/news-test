@@ -1,16 +1,16 @@
 import { FC } from "react";
+import { Helmet } from "react-helmet-async";
 
 import { ROUTES } from "@/shared/config/router/types";
 import { PAGE_TITLE } from "@/shared/lib/constants";
 import Image from "@/shared/ui/image";
 import PageTitle from "@/shared/ui/pageTitle";
 import SectionContainer from "@/shared/ui/sectionContainer";
-import { Helmet } from "react-helmet";
 
 const InfoPage: FC = () => {
     return (
         <>
-            <Helmet>
+            <Helmet key={"info"}>
                 <title>{PAGE_TITLE[ROUTES.info]}</title>
                 <meta name={"description"} content={"Познакомьтесь поближе с нашей компанией"} />
                 <meta

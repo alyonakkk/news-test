@@ -6,17 +6,19 @@ import { LoaderFull } from "@/shared/ui/loader";
 
 import { Router } from "./providers/router";
 import ThemeProvider from "./providers/theme";
+import { HelmetProvider } from "react-helmet-async";
 
 const App: FC<any> = ({ dataset }) => {
-    console.log(dataset.name);
     return (
-        <Provider store={store}>
-            <ThemeProvider>
-                <Suspense fallback={<LoaderFull />}>
-                    <Router />
-                </Suspense>
-            </ThemeProvider>
-        </Provider>
+        <HelmetProvider>
+            <Provider store={store}>
+                <ThemeProvider>
+                    <Suspense fallback={<LoaderFull />}>
+                        <Router />
+                    </Suspense>
+                </ThemeProvider>
+            </Provider>
+        </HelmetProvider>
     );
 };
 

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import { ROUTES } from "@/shared/config/router/types";
 import { PAGE_TITLE } from "@/shared/lib/constants";
@@ -10,7 +10,7 @@ import Partners from "@/widgets/partners";
 const AboutPage: FC = () => {
     return (
         <>
-            <Helmet>
+            <Helmet key={"about"}>
                 <title>{PAGE_TITLE[ROUTES.about]}</title>
                 <meta name={"description"} content={"Ознакомьтесь с нашими партнерами и напишите нам"} />
                 <meta

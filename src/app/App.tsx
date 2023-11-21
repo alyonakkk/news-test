@@ -1,5 +1,4 @@
 import { FC, Suspense } from "react";
-import { HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
 
 import store from "@/shared/config/store";
@@ -10,15 +9,13 @@ import ThemeProvider from "./providers/theme";
 
 const App: FC<any> = ({ dataset }) => {
     return (
-        <HelmetProvider>
-            <Provider store={store}>
-                <ThemeProvider>
-                    <Suspense fallback={<LoaderFull />}>
-                        <Router />
-                    </Suspense>
-                </ThemeProvider>
-            </Provider>
-        </HelmetProvider>
+        <Provider store={store}>
+            <ThemeProvider>
+                <Suspense fallback={<LoaderFull />}>
+                    <Router />
+                </Suspense>
+            </ThemeProvider>
+        </Provider>
     );
 };
 

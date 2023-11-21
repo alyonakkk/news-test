@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 import { fetchCategories, fetchFilters, fetchPosts } from "@/entities/post";
 import PostsFilter from "@/features/postsFilter";

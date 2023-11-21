@@ -23,16 +23,22 @@ const NewsPage: FC = () => {
     return (
         <>
             <Helmet key={"news"} htmlAttributes={{ lang: "ru" }}>
-                <title>{PAGE_TITLE[ROUTES.news]}</title>
-                <meta charSet="UTF-8" />
+                <title data-react-helmet="true">{PAGE_TITLE[ROUTES.news]}</title>
+                <meta charSet="UTF-8" data-react-helmet="true" />
                 <meta
                     name="viewport"
+                    data-react-helmet="true"
                     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
                 />
-                <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-                <link rel="icon" href="favicon.ico" />
-                <meta name={"description"} content={"Узнайте все о криптовалюте, NFT и блокчейнах."} />
+                <meta httpEquiv="X-UA-Compatible" content="ie=edge" data-react-helmet="true" />
+                <link rel="icon" href="favicon.ico" data-react-helmet="true" />
                 <meta
+                    data-react-helmet="true"
+                    name={"description"}
+                    content={"Узнайте все о криптовалюте, NFT и блокчейнах."}
+                />
+                <meta
+                    data-react-helmet="true"
                     name={"keywords"}
                     content={
                         "программа долгосрочных сбережений граждан, пдс, долгосрочные сбережения, софинансирование, вступить в программу" +
@@ -40,11 +46,19 @@ const NewsPage: FC = () => {
                         " вопросы и ответы, faq, нпф сбербанка, сбернпф"
                     }
                 />
-                <meta property={"og:title"} content={PAGE_TITLE[ROUTES.news]} />
-                <meta property={"og:url"} content={window.location.origin + window.location.pathname} />
-                <meta property={"og:description"} content={"Узнайте все о криптовалюте, NFT и блокчейнах."} />
-                <meta property={"og:site_name"} content={PAGE_TITLE[ROUTES.news]} />
-                <meta property={"og:locale"} content={"ru_RU"} />
+                <meta data-react-helmet="true" property={"og:title"} content={PAGE_TITLE[ROUTES.news]} />
+                <meta
+                    data-react-helmet="true"
+                    property={"og:url"}
+                    content={window.location.origin + window.location.pathname}
+                />
+                <meta
+                    data-react-helmet="true"
+                    property={"og:description"}
+                    content={"Узнайте все о криптовалюте, NFT и блокчейнах."}
+                />
+                <meta data-react-helmet="true" property={"og:site_name"} content={PAGE_TITLE[ROUTES.news]} />
+                <meta data-react-helmet="true" property={"og:locale"} content={"ru_RU"} />
             </Helmet>
             <PageTitle
                 title={PAGE_TITLE[ROUTES.news]}
